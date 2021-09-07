@@ -1,6 +1,7 @@
 #files
 pipfile.lock
 schema.sql
+notes.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
