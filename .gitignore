@@ -1,3 +1,7 @@
+#files
+pipfile.lock
+schema.sql
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
