@@ -10,9 +10,12 @@ class User(models.Model):
 class Watchlist(models.Model):
     ticker_symbol = models.CharField(max_length=5)
     name = models.CharField(max_length=250)
-    current_stock_price = models.IntegerField
-    purchase_price = models.IntegerField
-    selling_price = models.IntegerField
-    purchase_date = models.DateField
-    percent_change = models.DecimalField
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='watchlist')
+    current_stock_price = models.DecimalField(max_digits=10, decimal_places=2, default=True)
+    purchase_price = models.DecimalField(max_digits=10, decimal_places=2, default=True)
+    selling_price = models.DecimalField(max_digits=10, decimal_places=2, default=True)
+    purchase_date = models.DateField(default=True)
+    percent_change = models.DecimalField(max_digits=10, decimal_places=2, default=True)
+    user = models.ForeignKey(
+        User, 
+        on_delete=models.CASCADE, 
+        related_name='watchlist')
