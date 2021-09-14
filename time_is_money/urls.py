@@ -22,7 +22,9 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserView, 'user')
 router.register(r'watchlists', views.WatchlistView, 'watchlist')
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    # path('hello/', views.watchList)
 ]
